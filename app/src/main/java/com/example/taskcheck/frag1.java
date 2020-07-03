@@ -52,10 +52,10 @@ public class frag1 extends Fragment
            View view=inflater.inflate(R.layout.frag1,container,false);
            textView=(TextView)view.findViewById(R.id.textView);
            txtProgress=(TextView)view.findViewById(R.id.progress);
-          txtPageNo=(TextView) view.findViewById(R.id.txtpageNo);
+           txtPageNo=(TextView) view.findViewById(R.id.txtpageNo);
            seekBar=(SeekBar)view.findViewById(R.id.seekBar);
-         btnNext=(ImageButton)view.findViewById(R.id.btnNext);
-         btnPrev=(ImageButton)view.findViewById(R.id.btnprev);
+           btnNext=(ImageButton)view.findViewById(R.id.btnNext);
+           btnPrev=(ImageButton)view.findViewById(R.id.btnprev);
 
          SharedPreferences sharedPreferences=getActivity().getSharedPreferences("com.example.taskcheck",Context.MODE_PRIVATE);
          int size=sharedPreferences.getInt("size",18);
@@ -63,7 +63,7 @@ public class frag1 extends Fragment
 
         textView.setText(str[0]);
         textView.setTextSize(size);
-        txtPageNo.setText(0+"/"+str.length);
+        txtPageNo.setText(pNo+"/"+str.length);
         dimension();
 
         btnNext.setOnClickListener(new View.OnClickListener() {
